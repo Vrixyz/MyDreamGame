@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+
+        <link rel="stylesheet" type="text/css" href="./popup.css" />
+    </head>
+
+    <body>
+    <p>
+        This is the main content. To display a popup click <a href = "javascript:void(0)"
+                                                                 onclick = "document.getElementById('popupRespawn').style.display='block';">here</a>
+    </p>
+        <div id="popupRespawn" class="popup">
+            <h1>Respawn</h1>
+            <div class="respawnButton">
+            <a href = "javascript:void(0)"
+                                     onclick = "document.getElementById('popupRespawn').style.display='none';
+                                     document.getElementById('fade').style.display='none'">Go!</a>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>World</title>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<link rel="stylesheet" type="text/css" href="./popup.css" />
+</head>
+<body>
+	<div id="map" style="height: 98vh"></div>
+    <script src="/socket.io/socket.io.js"></script>
+	<script src="static/bundle.js"></script>
+	<!-- <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="./jquery-jsonrpc-master/jquery.jsonrpc.js"></script> -->
+	<script>
+		function attack2(id) {
+			alert("attack " + id + "!");
+		}
+	</script>
+	<div id="popupRespawn" class="popup">
+		<h1>Respawn</h1>
+		<div class="respawnButton">
+			<!-- TODO: the onclicks should trigger functions to do stuff, not just hiding. (or perhaps the linking should be in js, linking here breaks mvc... -->
+			<a href = "javascript:void(0)"
+			   onclick = "spawnHuman();document.getElementById('popupRespawn').style.display='none';">Go!</a>
+		</div>
+	</div>
+	<div id="popupBattleInProgress" class="popup">
+		<h1>Battle in progress</h1>
+		<div class="fleeButton">
+			<a href = "javascript:void(0)"
+			   onclick = "document.getElementById('popupBattle').style.display='none';">Flee!</a>
+		</div>
+		<div class="loadingEmpty">
+			<div class="loadingFill" id="indicatorLoadingBattleResult">
+				<!-- this should be clickable to obtain information about the action (battle: who's winning ? estimated time of ending..?) -->
+			</div>
+			<!-- this should be clickable to obtain information about the action (battle: who's winning ? estimated time of ending..?) -->
+			<a href = "javascript:void(0)"
+			   onclick = "document.getElementById('popupBattle').style.display='none';">Battle in progress</a>
+		</div>
+		<div class="refreshButton">
+			<a href = "javascript:void(0)"
+			   onclick = "refreshStatus();">refresh</a>
+		</div>
+	</div>
+	<div id="popupBattleResultWin" class="popup">
+		<h1>YOU WIN!</h1>
+		<div class="positiveButton">
+			<a href = "javascript:void(0)"
+			   onclick = "document.getElementById('popupBattleResultWin').style.display='none';">Hell yeah!</a>
+		</div>
+	</div>
+	<div id="popupBattleResultLoss" class="popup">
+		<h1>YOU LOSE</h1>
+		<div class="negativeButton">
+			<a href = "javascript:void(0)"
+			   onclick = "document.getElementById('popupBattleResultLoss').style.display='none';
+					      document.getElementById('popupRespawn').style.display='block';"
+					>No...</a>
+		</div>
+	</div>
+</body>
+</html>

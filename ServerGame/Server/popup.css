@@ -1,0 +1,40 @@
+div.popup {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    z-index:1002;
+    overflow: auto;
+
+    line-height: 1.5em;
+    color: #444444;
+    background-image: linear-gradient(#E5E5E5, #CFCFCF);
+    box-shadow: 3px 2px 5px 1px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+    text-align: center;
+}
+
+.respawnButton {
+    text-align: center;
+}
+
+/*
+ loading bar images from opengameart, credits to StumpyStrust
+*/
+div.loadingEmpty {
+    background: url("static/loadingEmpty.png") no-repeat;
+    height: 54px;
+    width: 355px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.loadingFill {
+    background: url("static/loadingFull.png") no-repeat;
+    height: 54px;
+    width: 355px;
+}
