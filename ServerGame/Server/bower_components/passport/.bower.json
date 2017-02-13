@@ -1,0 +1,15 @@
+{
+  "name": "passport",
+  "homepage": "https://github.com/jaredhanson/passport",
+  "version": "0.2.2",
+  "_release": "0.2.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.2",
+    "commit": "cdf8b9c2764b6a9b4e2f98c7d67ccf65794c8568"
+  },
+  "_source": "git://github.com/jaredhanson/passport.git",
+  "_target": "~0.2.2",
+  "_originalSource": "passport",
+  "_direct": true
+}

@@ -1,1 +1,1 @@
-watchify client.js -o static/bundle.js -v
+watchify app/client.js -o app/static/bundle.js -v &
